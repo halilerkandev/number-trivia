@@ -30,10 +30,6 @@ describe("GetRandomNumberTrivia", () => {
     "getRandomNumberTrivia"
   );
 
-  beforeEach(() => {
-    getRandomNumberTriviaMock.mockClear();
-  });
-
   test("should get random trivia from repository", async () => {
     // arrange
     getRandomNumberTriviaMock.mockImplementation(() =>

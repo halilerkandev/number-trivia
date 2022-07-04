@@ -25,21 +25,14 @@ describe("ExpoSecureStorageNumberTriviaLocalDataSource", () => {
   let getItemSpy = jest.spyOn(ExpoSecureStorage.prototype, "getItem");
   let setItemSpy = jest.spyOn(ExpoSecureStorage.prototype, "setItem");
 
-  let getLastNumberTriviaSpy = jest.spyOn(
+  jest.spyOn(
     ExpoSecureStorageNumberTriviaLocalDataSource.prototype,
     "getLastNumberTrivia"
   );
-  let cacheNumberTriviaSpy = jest.spyOn(
+  jest.spyOn(
     ExpoSecureStorageNumberTriviaLocalDataSource.prototype,
     "cacheNumberTrivia"
   );
-
-  beforeEach(() => {
-    getLastNumberTriviaSpy.mockClear();
-    cacheNumberTriviaSpy.mockClear();
-    getItemSpy.mockClear();
-    setItemSpy.mockClear();
-  });
 
   describe("get last number trivia", () => {
     test("should return number trivia from secure storage when there is one in the cache", async () => {

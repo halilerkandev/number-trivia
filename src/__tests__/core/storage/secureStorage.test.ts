@@ -30,21 +30,10 @@ describe("SecureStorage", () => {
     isAvailableAsync as jest.Mock
   ).mockImplementation(() => Promise.resolve(true));
 
-  const getItemSpy = jest.spyOn(ExpoSecureStorage.prototype, "getItem");
-  const setItemSpy = jest.spyOn(ExpoSecureStorage.prototype, "setItem");
-  const deleteItemSpy = jest.spyOn(ExpoSecureStorage.prototype, "deleteItem");
-  const isAvailableSpy = jest.spyOn(ExpoSecureStorage.prototype, "isAvailable");
-
-  beforeEach(() => {
-    getItemAsyncMock.mockClear();
-    setItemAsyncMock.mockClear();
-    deleteItemAsyncMock.mockClear();
-    isAvailableAsyncMock.mockClear();
-    getItemSpy.mockClear();
-    setItemSpy.mockClear();
-    deleteItemSpy.mockClear();
-    isAvailableSpy.mockClear();
-  });
+  jest.spyOn(ExpoSecureStorage.prototype, "getItem");
+  jest.spyOn(ExpoSecureStorage.prototype, "setItem");
+  jest.spyOn(ExpoSecureStorage.prototype, "deleteItem");
+  jest.spyOn(ExpoSecureStorage.prototype, "isAvailable");
 
   describe("Get item", () => {
     test("should get item from cache successfully", async () => {

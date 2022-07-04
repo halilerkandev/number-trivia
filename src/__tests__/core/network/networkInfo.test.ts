@@ -18,10 +18,6 @@ describe("ExpoNetworkInfo", () => {
 
   const getNetworkStateAsyncMock = getNetworkStateAsync as jest.Mock;
 
-  beforeEach(() => {
-    getNetworkStateAsyncMock.mockClear();
-  });
-
   describe("is internet reachable", () => {
     test("should forward the call to", async () => {
       // arrange

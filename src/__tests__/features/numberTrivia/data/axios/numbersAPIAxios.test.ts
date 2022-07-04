@@ -11,14 +11,8 @@ describe("Numbers API", () => {
 
   const getSpy = jest.spyOn(axios, "get");
 
-  const getTriviaByNumberSpy = jest.spyOn(NumbersAPIAxios, "getTriviaByNumber");
-  const getRandomTriviaSpy = jest.spyOn(NumbersAPIAxios, "getRandomTrivia");
-
-  beforeEach(() => {
-    getSpy.mockClear();
-    getTriviaByNumberSpy.mockClear();
-    getRandomTriviaSpy.mockClear();
-  });
+  jest.spyOn(NumbersAPIAxios, "getTriviaByNumber");
+  jest.spyOn(NumbersAPIAxios, "getRandomTrivia");
 
   test("should get trivia by number", async () => {
     // arrange

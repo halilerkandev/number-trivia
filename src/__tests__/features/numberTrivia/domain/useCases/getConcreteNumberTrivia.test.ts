@@ -36,10 +36,6 @@ describe("GetConcreteNumberTrivia", () => {
     "getConcreteNumberTrivia"
   );
 
-  beforeEach(() => {
-    getConcreteNumberTriviaMock.mockClear();
-  });
-
   test("should get trivia for the number from repository", async () => {
     // arrange
     getConcreteNumberTriviaMock.mockImplementation(() =>

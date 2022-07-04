@@ -78,14 +78,6 @@ describe("MainNumberTriviaRepository", () => {
     "getRandomNumberTrivia"
   );
 
-  beforeEach(() => {
-    isInternetReachableMock.mockClear();
-    cacheNumberTriviaMock.mockClear();
-    getConcreteNumberTrivia.mockClear();
-    getLastNumberTrivia.mockClear();
-    getRandomNumberTrivia.mockClear();
-  });
-
   describe("getConcreteNumberTrivia", () => {
     test("should check if the device is online", async () => {
       // arrange
